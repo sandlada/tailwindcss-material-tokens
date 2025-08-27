@@ -1,6 +1,8 @@
 # tailwindcss-material-tokens
 
-_If you wish, you are welcome to submit a document update request_
+**This project was developed for TailwindCSS v3 and is no longer maintained.**
+
+**We recommend migrating from TailwindCSS v3 to v4. If you are using TailwindCSS v4, please visit [@sandlada/material-design-css](https://github.com/sandlada/material-design-css).**
 
 ---
 
@@ -38,6 +40,7 @@ _If you don’t want to be troubled by the original styles of tailwindcss, pleas
 ## Usage
 
 For example:
+
 ```html
 <div class="w-24 h-24 shape-large elevation-1 bg-primary">
     <p class="text-title-large text-on-primary">Title</p>
@@ -45,6 +48,7 @@ For example:
 ```
 
 ### provideColor & provide*
+
 ```typescript
 import { provideBorder, provideColor, provideElevation, provideMotion, provideShape, provideSizing, provideTypography, provideWindowMediaQuery } from '@glare-labs/tailwindcss-material-tokens'
 
@@ -78,14 +82,16 @@ export default {
 ```
 
 ### provideAll
+
 provideAll includes:
-- border
-- color
-- elevation
-- motion
-- shape
-- sizing
-- typography
+
++ border
++ color
++ elevation
++ motion
++ shape
++ sizing
++ typography
 
 ```typescript
 import { provideAll } from '@glare-labs/tailwindcss-material-tokens'
@@ -107,6 +113,7 @@ export default {
 Most plugins support `prefix`, `hardcodeDefaultValue`, `excludeTokens` and `customTokens` options.
 
 ### prefix
+
 prefix represents a public CSS variable:
 
 ```typescript
@@ -116,6 +123,7 @@ const color = provideColor({
 ```
 
 the result:
+
 ```css
 .bg-primary {
     background-color: var(--my-product-prefix-primary, #005ac1);
@@ -123,6 +131,7 @@ the result:
 ```
 
 ### hardcodeDefaultValue
+
 If hardcodeDefaultValue is true, the CSS contains a default value.
 
 ```typescript
@@ -133,6 +142,7 @@ const color = provideColor({
 ```
 
 the result:
+
 ```css
 .bg-primary {
     background-color: var(--my-product-prefix-primary,);
@@ -140,6 +150,7 @@ the result:
 ```
 
 ### excludeTokens
+
 excludeTokens is a token blacklist, including unnecessary token groups.
 
 ```typescript
@@ -154,6 +165,7 @@ const color = provideColor({
 ## Default Color Values
 
 _Contains only color._
+
 ```javascript
 {
   primaryPaletteKeyColor: '#047aff',
